@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>爱游戏体育 · 知识库入口介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, 'Georgia', 'Noto Serif SC', 'Songti SC', serif;
+            background: #faf7f0;
+            color: #2c2b28;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fffdf8;
+            padding: 2.8rem 2.2rem;
+            border-radius: 18px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        /* 目录感区域 —— 知识卡片式网格 */
+        .dir-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+            margin: 2rem 0 2.8rem 0;
+        }
+        .dir-card {
+            background: #f4efe7;
+            padding: 1.4rem 1.2rem 1.2rem 1.2rem;
+            border-radius: 14px;
+            border-left: 4px solid #b7a58b;
+            transition: background 0.2s;
+        }
+        .dir-card:hover {
+            background: #ede6db;
+        }
+        .dir-card h3 {
+            font-size: 1.1rem;
+            font-weight: 550;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            color: #4d4035;
+        }
+        .dir-card p {
+            font-size: 0.95rem;
+            color: #4b463f;
+            line-height: 1.6;
+        }
+        .dir-card .tag {
+            display: inline-block;
+            background: #d8cdbc;
+            color: #2c2b28;
+            font-size: 0.75rem;
+            padding: 0.1rem 0.7rem;
+            border-radius: 30px;
+            margin-top: 0.45rem;
+            font-weight: 450;
+        }
+
+        /* 说明区域 */
+        .intro-block {
+            margin-bottom: 2.5rem;
+        }
+        .intro-block h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #3e342b;
+            border-bottom: 2px solid #daccbb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.3rem;
+        }
+        .intro-block p {
+            margin-bottom: 1rem;
+            text-indent: 2em;
+        }
+
+        /* 引用块 / 提示框 */
+        .callout {
+            background: #ede5d9;
+            padding: 1.4rem 1.8rem;
+            border-radius: 20px;
+            border-left: 7px solid #a48f79;
+            margin: 2rem 0 2.2rem 0;
+            font-size: 0.98rem;
+            color: #2f2c27;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+        .callout strong {
+            font-weight: 600;
+            color: #3e2f21;
+        }
+        .callout p {
+            margin-bottom: 0.3rem;
+        }
+
+        .info-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2.2rem 0 2rem 0;
+            padding: 1.5rem 0;
+            border-top: 1px dashed #d5cbbc;
+            border-bottom: 1px dashed #d5cbbc;
+        }
+        .info-item {
+            flex: 1 1 200px;
+        }
+        .info-item h4 {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #7f715f;
+            margin-bottom: 0.3rem;
+        }
+        .info-item p {
+            font-size: 0.95rem;
+        }
+
+        .faq-mini {
+            background: #f1ece3;
+            padding: 1rem 1.6rem;
+            border-radius: 30px;
+            margin: 2.4rem 0 1.8rem 0;
+            font-size: 0.95rem;
+        }
+        .faq-mini summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #3d342c;
+        }
+        .faq-mini p {
+            margin-top: 0.6rem;
+            padding-left: 0.4rem;
+        }
+
+        .link-sentence {
+            margin: 1.2rem 0;
+            font-size: 1rem;
+            background: #f6f0e8;
+            padding: 0.8rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        a {
+            color: #4f3e2d;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1.5px;
+            text-decoration-color: #b7a284;
+            font-weight: 500;
+        }
+        a:hover {
+            color: #8b6f51;
+            text-decoration-color: #8b6f51;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #9a8d7c;
+            border-top: 1px solid #e1d7cb;
+            padding-top: 1.2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 620px) {
+            body { padding: 1rem 0.8rem; }
+            .page { padding: 1.8rem 1rem; }
+            .dir-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .intro-block h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 标题 / 介绍区 -->
+    <div class="intro-block">
+        <h1>爱游戏体育 · 知识库入口</h1>
+        <p>当你第一次来到 <a href="https://cctv-ayxsports.com.cn" style="text-decoration:underline;">爱游戏体育</a>，可能会好奇这个平台具体提供什么、适合哪些场景。下面的内容帮你快速建立认知——从功能定位、内容特点到常见疑问，以目录卡片和说明区的形式梳理。</p>
+        <p>无论你是想了解体育资讯、赛事动向，还是寻找一个信息聚合的起点，这个页面可以充当快速索引。整个站点围绕“体育内容集成”展开，不侧重单一项目，而是覆盖多个运动领域。</p>
+    </div>
+
+    <!-- 目录感网格：知识卡片 -->
+    <div class="dir-grid">
+        <div class="dir-card">
+            <h3>🏅 内容定位</h3>
+            <p>以体育赛事、运动知识、实时资讯为主干，兼顾深度分析与数据汇总。内容更新频率较高，适合日常浏览。</p>
+            <span class="tag">资讯聚合</span>
+        </div>
+        <div class="dir-card">
+            <h3>📋 适用场景</h3>
+            <p>赛前了解对阵、赛后查看综述、查阅运动规则、跟踪联赛动态。也适合体育类内容创作者寻找选题线索。</p>
+            <span class="tag">查·看·比</span>
+        </div>
+        <div class="dir-card">
+            <h3>⚽ 覆盖项目</h3>
+            <p>足球、篮球、网球、乒乓球、羽毛球、电竞等主流及新兴项目均有涉及，并按照赛季与热点进行归类。</p>
+            <span class="tag">多项目标</span>
+        </div>
+        <div class="dir-card">
+            <h3>🧭 导航逻辑</h3>
+            <p>首页采用分类入口 + 最新文章流，结构清晰。可在站内通过标签或搜索快速定位某类内容。</p>
+            <span class="tag">类目检索</span>
+        </div>
+    </div>
+
+    <!-- 说明区 + 提示框 -->
+    <div class="callout">
+        <p><strong>📌 使用提示</strong> —— 该站并非单一赛事直播平台，而是以体育知识、新闻、背景资料为主的综合信息库。如果你正在寻找某个运动项目的历史记录、赛季数据或科普介绍，<a href="https://cctv-ayxsports.com.cn">爱游戏体育</a>的内容结构会更适合深度阅读与横向比较。</p>
+        <p style="margin-top:0.4rem;">建议首次使用时可先浏览首页板块分类，或通过站内搜索直接输入运动名称。</p>
+    </div>
+
+    <!-- 相关信息区：三块 -->
+    <div class="info-area">
+        <div class="info-item">
+            <h4>信息可信度</h4>
+            <p>内容参考公开赛事数据与体育媒体，并标注引用来源（如有）。用户可根据需要交叉核对。</p>
+        </div>
+        <div class="info-item">
+            <h4>更新节奏</h4>
+            <p>重要赛事期间每日更新，常规时段保持 3–5 篇/周。历史文章可长期查阅。</p>
+        </div>
+        <div class="info-item">
+            <h4>与其他站区别</h4>
+            <p>侧重知识梳理而非即时比分流，适合希望系统了解体育背景的用户。</p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要  -->
+    <div class="faq-mini">
+        <details>
+            <summary>❓ 常见疑问摘要 —— 爱游戏体育适合哪些人？</summary>
+            <p>• 想快速了解某项运动的基本规则、历史或当前赛季动态。<br>
+            • 需要查找特定赛事的结果回顾或简短分析。<br>
+            • 体育类学生、写作者或爱好者寻找参考资料。<br>
+            • 希望在一个站点内看到不同运动项目的横向内容，而非只关注单一联赛。</p>
+        </details>
+    </div>
+
+    <!-- 自然嵌入链接的句子（再次确保指向且文本正确）-->
+    <div class="link-sentence">
+        📎 如果你对体育内容的具体分类感兴趣，可以直接浏览 <a href="https://cctv-ayxsports.com.cn">爱游戏体育</a> 的首页板块。
+    </div>
+
+    <footer>
+        本页面为知识库式介绍，内容基于公开信息整理 · 仅供参考
+    </footer>
+</div>
+</body>
+</html>
